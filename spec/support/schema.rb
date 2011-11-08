@@ -5,4 +5,5 @@ ActiveRecord::Schema.define do
     t.string :text
     t.timestamps
   end
+
 end

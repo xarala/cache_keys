@@ -1,5 +1,3 @@
-class Post < ActiveRecord::Base
-    
-    
+class Post < ActiveRecord::Base   
     cache_keys [:comments, :tweets]
-end
+end

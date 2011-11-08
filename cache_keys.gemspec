@@ -18,8 +18,14 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  # specify any dependencies here; for example:
+  # Widows Dependencies
+  s.add_development_dependency "win32console"
+  s.add_development_dependency "rb-fchange"
+  
   s.add_development_dependency "rspec"
+  s.add_development_dependency "guard"
+  s.add_development_dependency "guard-rspec"
   s.add_development_dependency "sqlite3-ruby"
   s.add_dependency "activerecord", "~> 3.0"
+  
 end

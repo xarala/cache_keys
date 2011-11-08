@@ -2,9 +2,13 @@ require 'spec_helper'
 
 describe "CacheKeys::Cache" do
   
+  before(:each) do
+    @post = Post.first
+  end
+  
   it "responds to cache_keys" do  
-    Post.first.comments_cache_key.should eql('comments')
-    Post.first.tweets_cache_key.should eql('tweets')
+    @post.comments_cache_key.should eql("comments-#{@post.cache_key}")
+    @post.tweets_cache_key.should eql("tweets-#{@post.cache_key}")
   end
   
 end

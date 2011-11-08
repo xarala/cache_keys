@@ -1,9 +1,10 @@
-require 'cache_keys'
+require 'spec_helper'
 
 describe "CacheKeys::Cache" do
   
-  it "responds with cache" do
-    CacheKeys::Kash.cache.should eql('cache')
+  it "responds to cache_keys" do  
+    Post.first.comments_cache_key.should eql('comments')
+    Post.first.tweets_cache_key.should eql('tweets')
   end
   
 end
